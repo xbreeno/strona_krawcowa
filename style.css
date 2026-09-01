@@ -159,6 +159,96 @@ p {
     margin-top: 40px;
 }
 
+.pricing_block {
+    margin-top: 70px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(139, 111, 71, 0.2);
+}
+
+.pricing_title {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin-bottom: 12px;
+    color: #1f1f1f;
+}
+
+.pricing_note {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 30px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.pricing_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.pricing_column {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 22px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(139, 111, 71, 0.08);
+}
+
+.pricing_column h3,
+.pricing_section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    color: #1d1d1d;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.price_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price_list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    color: #333;
+}
+
+.price_list li:last-child {
+    border-bottom: none;
+}
+
+.price_list li span {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.price_list li strong {
+    font-weight: 600;
+    white-space: nowrap;
+    color: #2c2c2c;
+}
+
+.pricing_section {
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.inline_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
 .service_card {
     background: #fff;
     padding: 35px;
@@ -168,6 +258,21 @@ p {
     border-left: 4px solid #8b6f47;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    .price_list li {
+        display: block;
+    }
+
+    .price_list li strong {
+        display: block;
+        margin-top: 4px;
+    }
+
+    .pricing_block {
+        margin-top: 50px;
+    }
 }
 
 .service_card::before {
