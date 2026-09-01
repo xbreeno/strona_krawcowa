@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krawcowa</title> <!-- tytul do ustalenia -->
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+</head>
+<body>
+    <header>
+        <a href="#" id="logo_link">
+            <img src="logo.png" alt="logo" id="logo">
+        </a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#o_mnie">O mnie</a>
+        <a href="#faq">O co pytacie?</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" class="social_media"></a>
+        <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook" class="social_media"></a>
+
+    </header>
+
+    <main>
+        <!-- sekcja z lokalizacją(może google maps jak się uda) i pinezką -->
+        <section id="uslugi">
+            <div class="services_intro">
+                <p class="eyebrow">Co mogę dla Ciebie zrobić?</p>
+                <h1>Usługi krawieckie</h1>
+                <p>Dbam o to, aby każda rzecz dobrze leżała i służyła przez lata. Wycena jest zawsze indywidualna i zależy od rodzaju materiału oraz zakresu pracy.</p>
+            </div>
+            <div class="services_grid">
+                <article class="service_card">
+                    <span class="service_number">01</span>
+                    <h2>Przeróbki odzieży</h2>
+                    <p>Zwężanie, skracanie i dopasowywanie ubrań do Twojej sylwetki. Poprawiam również zameczki, guziki i podszewki.</p>
+                </article>
+                <article class="service_card">
+                    <span class="service_number">02</span>
+                    <h2>Szycie na miarę</h2>
+                    <p>Tworzę wyjątkowe ubrania od pierwszego pomiaru po ostatnie wykończenie, zgodnie z Twoim pomysłem i stylem.</p>
+                </article>
+                <article class="service_card">
+                    <span class="service_number">03</span>
+                    <h2>Naprawy i renowacje</h2>
+                    <p>Przywracam ulubionym ubraniom dobry wygląd. Naprawiam rozdarcia, przetarcia oraz wykonuję staranne poprawki.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h1>Galeria realizacji</h1>
+            <p>Zobacz wybrane prace wykonane w naszej pracowni.</p>
+            <div class="gallery_items">
+                <figure>
+                    <img class="gallery_thumbnail" src="logo.png" alt="Elegancka sukienka uszyta na miarę" tabindex="0">
+                    <figcaption>Sukienka na wyjątkową okazję</figcaption>
+                </figure>
+                <figure>
+                    <img class="gallery_thumbnail" src="logo.png" alt="Dopasowana marynarka po przeróbce" tabindex="0">
+                    <figcaption>Dopasowanie marynarki</figcaption>
+                </figure>
+                <figure>
+                    <img class="gallery_thumbnail" src="logo.png" alt="Odnowiony płaszcz z wymienionymi guzikami" tabindex="0">
+                    <figcaption>Odświeżenie ulubionego płaszcza</figcaption>
+                </figure>
+            </div>
+        </section>
+     
+        <section id="o_mnie">
+            <h1>O mnie</h1>
+            <p>Nazywam się Anna i od ponad 10 lat zajmuję się krawiectwem. W mojej pracowni łączę precyzję, doświadczenie i szacunek do każdej rzeczy, która trafia w moje ręce.</p>
+            <p>Największą satysfakcję daje mi nadawanie ubraniom drugiego życia oraz tworzenie projektów, w których klient czuje się naprawdę sobą. Zawsze zaczynam od rozmowy, dokładnych pomiarów i poznania Twoich potrzeb.</p>
+            <p>Pracuję starannie, w spokojnej atmosferze i dbam o estetykę każdego detalu.</p>
+        </section>
+
+        <section id="faq">
+            <h1>O co pytacie?</h1>
+            <details>
+                <summary>Ile trwa wykonanie przeróbki?</summary>
+                <p>Najczęściej od 3 do 7 dni roboczych. Dokładny termin ustalam podczas przyjęcia ubrania.</p>
+            </details>
+            <details>
+                <summary>Czy mogę przynieść własny materiał?</summary>
+                <p>Tak. Chętnie pracuję na materiałach klienta i przed rozpoczęciem oceniam, czy nadają się do wybranego projektu.</p>
+            </details>
+            <details>
+                <summary>Jak przygotować się do pierwszej wizyty?</summary>
+                <p>Warto przynieść buty lub dodatki, z którymi ubranie będzie noszone. Na miejscu wykonamy pomiary i omówimy szczegóły.</p>
+            </details>
+            <details>
+                <summary>Jak wygląda wycena?</summary>
+                <p>Wycena zależy od rodzaju ubrania, materiału i zakresu pracy. Podaję ją przed rozpoczęciem realizacji.</p>
+            </details>
+        </section>
+
+        <section id="kontakt">
+            <h1>Kontakt</h1>
+            <p>Zapraszam do kontaktu, aby omówić Twój pomysł lub umówić przymiarkę.</p>
+            <address>
+                <p><strong>Pracownia Krawiecka Anna</strong></p>
+                <p>ul. Szyciowa 12, 00-001 Warszawa</p>
+                <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+                <p>E-mail: <a href="mailto:kontakt@pracowniaanna.pl">kontakt@pracowniaanna.pl</a></p>
+            </address>
+            <form action="#kontakt" method="post">
+                <p><label for="name">Imię</label><br><input type="text" id="name" name="name" required></p>
+                <p><label for="email">Adres e-mail</label><br><input type="email" id="email" name="email" required></p>
+                <p><label for="message">Wiadomość</label><br><textarea id="message" name="message" rows="5" required></textarea></p>
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- klasyczna stopka wszystkie odnośniki i jakies rodo czy cos -->
+    </footer>
+
+    <div class="image_viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie" hidden>
+        <button class="image_viewer_close" id="imageViewerClose" type="button" aria-label="Zamknij podgląd">&times;</button>
+        <img id="fullImage" src="" alt="">
+    </div>
+
+    <script>
+        const imageViewer = document.getElementById('imageViewer');
+        const fullImage = document.getElementById('fullImage');
+        const closeButton = document.getElementById('imageViewerClose');
+        const thumbnails = document.querySelectorAll('.gallery_thumbnail');
+
+        function closeImageViewer() {
+            imageViewer.hidden = true;
+            document.body.style.overflow = '';
+        }
+
+        function openImageViewer(image) {
+            fullImage.src = image.src;
+            fullImage.alt = image.alt;
+            imageViewer.hidden = false;
+            document.body.style.overflow = 'hidden';
+            closeButton.focus();
+        }
+
+        thumbnails.forEach(function (thumbnail) {
+            thumbnail.addEventListener('click', function () {
+                openImageViewer(thumbnail);
+            });
+
+            thumbnail.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openImageViewer(thumbnail);
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', closeImageViewer);
+        imageViewer.addEventListener('click', function (event) {
+            if (event.target === imageViewer) {
+                closeImageViewer();
+            }
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && !imageViewer.hidden) {
+                closeImageViewer();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- te kropki na prawo fajne https://prawko-szczecin.pl/#services -->
