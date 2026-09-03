@@ -23,7 +23,47 @@
     </header>
 
     <main>
-        <!-- sekcja z lokalizacją(może google maps jak się uda) i pinezką -->
+        <section class="location-section" aria-labelledby="location-title">
+            <div class="location-container">
+                <div class="location-info">
+                    <p class="eyebrow">Odwiedź moją pracownię</p>
+                    <h2 id="location-title">Krawcowa Podjuchy</h2>
+                    <p class="address">
+                        ul. Metalowa 6<br>
+                        70-001 Szczecin
+                    </p>
+
+                    <p class="phone">
+                        <strong>Telefon:</strong> <a href="tel:+48739165627">739 165 627</a>
+                    </p>
+
+                    <div class="hours">
+                        <h3>Godziny otwarcia:</h3>
+                        <p>Poniedziałek – Piątek: do 16:30</p>
+                    </div>
+
+                    <a
+                        href="https://www.google.com/maps/place/Krawcowa+Podjuchy/@53.3672433,14.5978476,17z/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="nav-button"
+                    >
+                        <span aria-hidden="true">📍</span> Otwórz w Google Maps
+                    </a>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        title="Krawcowa Podjuchy na mapie"
+                        src="https://maps.google.com/maps?q=Krawcowa%20Podjuchy,%20Metalowa%206,%20Szczecin&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
         <section id="uslugi">
             <div class="services_intro">
                 <p class="eyebrow">Co mogę dla Ciebie zrobić?</p>
