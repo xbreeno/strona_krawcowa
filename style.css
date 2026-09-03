@@ -371,7 +371,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 4px;
     background: linear-gradient(90deg, #8b6f47, #d4a574);
     transform: scaleX(0);
     transform-origin: left;
