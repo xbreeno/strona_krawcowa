@@ -107,10 +107,10 @@ body {
 /* Header Styling */
 header {
     height: auto;
-    padding: 15px 30px;
+    padding: 25px 30px;
     background: linear-gradient(135deg, #f5f3f0 0%, #e8e4df 100%);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     position: sticky;
@@ -131,6 +131,8 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
+    position: absolute;
+    left: 30px;
 }
 
 #logo_link::after {
@@ -140,7 +142,10 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header a {
@@ -619,13 +624,20 @@ address strong {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        position: sticky;
         gap: 15px;
+    }
+
+    #logo_link {
+        position: static;
     }
 
     header nav {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
+        position: static;
+        transform: none;
     }
 
     h1 {
