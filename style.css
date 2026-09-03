@@ -15,6 +15,7 @@ body {
 }
 
 .location-section {
+    margin-top: 32px;
     padding: 80px 30px;
     background: #f7f4ef;
 }
@@ -194,6 +195,7 @@ section {
     padding: 60px 40px;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 80px;
 }
 
 section:nth-child(odd) {
