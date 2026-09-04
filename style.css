@@ -258,6 +258,7 @@ p {
 
 .pricing_block {
     margin-top: 70px;
+    scroll-margin-top: 80px;
     padding-top: 40px;
     border-top: 1px solid rgba(139, 111, 71, 0.2);
 }
@@ -482,7 +483,7 @@ figcaption {
 
 details {
     background: #fff;
-    padding: 20px;
+    padding: 0;
     margin-bottom: 15px;
     border-radius: 6px;
     border-left: 4px solid #8b6f47;
@@ -497,9 +498,13 @@ details:hover {
 
 details[open] {
     background: #f9f7f4;
+    padding-bottom: 20px;
 }
 
 summary {
+    display: block;
+    padding: 20px;
+    list-style: none;
     font-weight: 600;
     font-size: 1.05em;
     color: #2a2a2a;
@@ -507,14 +512,34 @@ summary {
     transition: color 0.3s ease;
 }
 
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #8b6f47;
+    transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
 summary:hover {
     color: #8b6f47;
 }
 
 details p {
-    margin-top: 15px;
-    margin-bottom: 0;
-    color: #666;
+    margin: 0 20px;
+    padding: 14px 16px;
+    background: #fff;
+    border-left: 3px solid #d4a574;
+    color: #4f4f4f;
     line-height: 1.7;
 }
 
