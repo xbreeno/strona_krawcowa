@@ -178,6 +178,56 @@ header a:hover::after {
     width: 100%;
 }
 
+.section-dots {
+    position: fixed;
+    top: 50%;
+    right: 28px;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transform: translateY(-50%);
+}
+
+.section-dot {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #5e554d;
+    border-radius: 50%;
+    background: transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.section-dot:hover,
+.section-dot.is-active {
+    border-color: #5e554d;
+    background: #5e554d;
+    transform: scale(1.12);
+}
+
+.section-dot span {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    padding: 3px 8px;
+    background: #5e554d;
+    color: #fff;
+    font-size: 0.72rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) translateX(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.section-dot:hover span {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
 .social_media {
     height: 20px;
     width: 20px;
@@ -834,6 +884,10 @@ address strong {
 
     .gallery_items figure {
         width: 160px;
+    }
+
+    .section-dots {
+        display: none;
     }
 
     .site-footer {

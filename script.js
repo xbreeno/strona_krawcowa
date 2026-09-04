@@ -3,6 +3,41 @@ const statusMessage = document.getElementById('statusMessage');
 const submitBtn = document.getElementById('submitBtn');
 const subjectField = document.getElementById('emailSubject');
 
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+	link.addEventListener('click', function (event) {
+		event.preventDefault();
+
+		const targetId = link.getAttribute('href');
+		const target = targetId === '#' ? document.body : document.querySelector(targetId);
+
+		if (target) {
+			target.scrollIntoView({ behavior: 'smooth' });
+		}
+	});
+});
+
+const sectionDots = document.querySelectorAll('.section-dot');
+const observedSections = document.querySelectorAll('main > section[id]');
+
+if (sectionDots.length && observedSections.length) {
+	const sectionObserver = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			if (entry.isIntersecting) {
+				sectionDots.forEach(function (dot) {
+					dot.classList.toggle('is-active', dot.dataset.section === entry.target.id);
+				});
+			}
+		});
+	}, {
+		rootMargin: '-35% 0px -55% 0px',
+		threshold: 0
+	});
+
+	observedSections.forEach(function (section) {
+		sectionObserver.observe(section);
+	});
+}
+
 if (form && statusMessage && submitBtn && subjectField) {
 	form.addEventListener('submit', async function (event) {
 		event.preventDefault();
