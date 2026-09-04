@@ -477,7 +477,7 @@ figcaption {
 
 /* FAQ Section */
 #faq {
-    max-width: 700px !important;
+    max-width: 1200px;
     margin: 0 auto !important;
 }
 
@@ -546,7 +546,7 @@ details p {
 /* Contact Section */
 #kontakt {
     text-align: center;
-    max-width: 700px !important;
+    max-width: 1200px;
 }
 
 #kontakt h1 {
@@ -562,6 +562,9 @@ details p {
 address {
     font-style: normal;
     background: #f9f7f4;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
     border-left: 4px solid #8b6f47;
