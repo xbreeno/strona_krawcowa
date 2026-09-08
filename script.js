@@ -2,6 +2,38 @@ const form = document.getElementById('contactForm');
 const statusMessage = document.getElementById('statusMessage');
 const submitBtn = document.getElementById('submitBtn');
 const subjectField = document.getElementById('emailSubject');
+const header = document.querySelector('header');
+const locationSection = document.getElementById('lokalizacja');
+
+let previousScrollY = window.scrollY;
+let downwardScrollDistance = 0;
+const hideHeaderAfterScroll = 240;
+
+if (header) {
+	window.addEventListener('scroll', function () {
+		const currentScrollY = window.scrollY;
+		const hideHeaderAfter = locationSection
+			? locationSection.offsetTop + locationSection.offsetHeight
+			: header.offsetHeight;
+		const scrollDifference = currentScrollY - previousScrollY;
+
+		if (currentScrollY <= 0) {
+			header.classList.remove('header--hidden');
+			downwardScrollDistance = 0;
+		} else if (scrollDifference > 0) {
+			downwardScrollDistance += scrollDifference;
+
+			if (currentScrollY > hideHeaderAfter && downwardScrollDistance >= hideHeaderAfterScroll) {
+				header.classList.add('header--hidden');
+			}
+		} else if (scrollDifference < 0) {
+			header.classList.remove('header--hidden');
+			downwardScrollDistance = 0;
+		}
+
+		previousScrollY = currentScrollY;
+	}, { passive: true });
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 	link.addEventListener('click', function (event) {
